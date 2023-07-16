@@ -8,5 +8,10 @@ public class Main {
         PrintSomething printSomething = new PrintSomething();
         Thread t1 = new Thread(printSomething);
         t1.start();
+        for (int i = 0; i < 100; i++) {
+            NumberPrinter numberPrinter = new NumberPrinter(i);
+            Thread t = new Thread(numberPrinter);
+            t.start();
+        }
     }
 }

@@ -2,8 +2,7 @@ package concurrency;
 public class PrintSomething implements Runnable{
     @Override
     public void run() {
-        System.out.println("I am running on thread " + Thread.currentThread().getName());
-
+        System.out.println("I am running in PrintSomething on thread " + Thread.currentThread().getName());
         for (int i = 0; i < 100; i++) {
             System.out.println(i);
         }
